@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% for i in progress %}
+<div class="i-box">
+    <div class="i-name">{{ i[0] }}</div>
+    <div class="i-progress">
+        <span data-width="{{ i[1] }}%"></span>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
