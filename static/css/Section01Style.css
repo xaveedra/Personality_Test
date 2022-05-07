@@ -1,3 +1,8 @@
+*
+{
+  font-family : 'Inter', sans-serif;
+}
+
 header
 {
   display         : flex;
@@ -44,10 +49,10 @@ header h1
   align-items     : center;
   flex-direction  : column;
   justify-content : center;
-  width: 23%;
+  width           : 23%;
   height          : 100%;
   margin-left     : 1.4rem;
-  padding: 1rem 0.9rem;
+  padding         : 1rem 0.9rem;
   text-align      : center;
   border          : 1px solid rgba(250, 250, 250, 0);
   border-radius   : 15px;
@@ -64,15 +69,16 @@ header h1
   font-weight : 400;
 }
 
-@media (max-width: 858px) {
+@media (max-width : 858px)
+{
   header h1
   {
     font-size : 3.5rem;
   }
   .instructions
   {
-    margin-lefT:-1.5rem;
-    width          : 115%;
+    width       : 115%;
+    margin-lefT : -1.5rem;
   }
 }
 
@@ -102,9 +108,11 @@ header h1
   }
 }
 
-@media (max-width : 300px) {
-  header {
-    height: 7rem;
+@media (max-width : 300px)
+{
+  header
+  {
+    height : 7rem;
   }
   header h1
   {
