@@ -130,30 +130,40 @@ section
 
 /* Go to top button */
 
-#goToTop {
-  display: none;
-  position: fixed;
-  bottom: 4rem;
-  right: 16rem;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #C4C4C4;
-  cursor: pointer;
-  padding: 1.2rem 1.5rem;
-  border-radius: 12rem;
-  transition: all 0.3s ease;
+#goToTop
+{
+  position              : fixed;
+  right                 : 10rem;
+  bottom                : 5rem;
+  display               : block;
+  display               : none;
+  padding               : 1.2rem 1.5rem;
+  -moz-transition       : all 0.3s ease;
+  -ms-transition        : all 0.3s ease;
+  -o-transition         : all 0.3s ease;
+  -webkit-transition    : all 0.3s linear;
+  transition            : all 0.3s ease;
+  text-decoration       : none;
+  -moz-border-radius    : 35px;
+  -webkit-border-radius : 35px;
+  border-radius         : 50px;
+  background            : rgb(196, 196, 196);
+  background            : rgba(196, 196, 196, 0.7);
 }
 
-#goToTop:hover {
-  transform: scale(1.1);
-  transition: all 0.3s;
-  background-color: #a09f9f;
+#goToTop:hover
+{
+  transition       : all 0.3s;
+  transform        : scale(1.1);
+  background-color : #A09F9F;
 }
 
 @media (max-width : 860px)
 {
+  #goToTop
+  {
+    right : 5rem;
+  }
   .choices p
   {
     margin : 1rem 2rem;
@@ -161,12 +171,26 @@ section
 
   .nextButton
   {
-    width : 22rem;
+    width      : 22rem;
+    margin-top : 1rem;
+  }
+}
+
+@media (max-width : 540px)
+{
+  #goToTop
+  {
+    right  : 24rem;
+    bottom : 18rem;
   }
 }
 
 @media (max-width : 300px)
 {
+  #goToTop
+  {
+    right : 5rem;
+  }
   .question p:not(.choices p)
   {
     width       : 90%;
