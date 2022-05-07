@@ -1,3 +1,110 @@
 {% extends 'base.html' %}
 {% block body %}
+<!doctype html>
+<html lang="eng">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Myers-Briggs Personality Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style Sheet Files -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/TestStyle.css">
+    <link rel="stylesheet" href="css/Section01Style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <section class = "section01">
+
+      <header>
+        <h1>Personality Test</h1>
+      </header>
+
+      <div class = "instructions">
+
+        <div class = "instruction" style = "background-color: #D8E9EF">
+          <h2>Complete The Test</h2>
+          <p>Be yourself and answer honestly to
+             find out your personality type.</p>
+        </div>
+
+        <div class = "instruction" style = "background-color: #ECE5D5">
+          <h2>View Detailed Results</h2>
+          <p>Learn how your personality type
+             influences many areas of your life.</p>
+        </div>
+
+        <div class = "instruction" style = "background-color: #EDDEF4">
+          <h2>Unlock Your Potential</h2>
+          <p>Grow into the person you want to be
+             with your optional Premium Profile.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class = "questionsSection">
+
+      <div class = "questions">
+
+        <div class = "question">
+          <p>WHEN YOU GO SOMEWHERE FOR THE DAY, WOULD YOU RATHER</p>
+          <div class = "choices">
+            <p>PLAN WHAT YOU WILL DO AND WHEN</p>
+            <p>JUST GO!!</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>IF YOU WERE A TEACHER, WOULD YOU RATHER TEACH</p>
+          <div class = "choices">
+            <p>FACTS-BASED COURSES</p>
+            <p>COURSES INVOLVING OPINION OR THEORY?</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class = "pageSwitch">
+
+        <a>
+          <img src = "LeftArrow.svg" alt = "Right Arrow">
+        </a>
+
+        <div class = "pageNumbers">
+
+          <a>1</a>
+          <a>2</a>
+          <a>3</a>
+
+        </div>
+
+        <a>
+          <img src = "RightArrow.svg" alt = "Left Arrow">
+        </a>
+
+      </div>
+
+      <a onclick = "topFunction()">
+        <img id = "goToTop" src = "UpArrow.svg" alt = "Up Arrow">
+      </a>
+
+      <button class = "nextButton">Next</button>
+
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="js/GoToTop.js" ></script>
+
+  </body>
+
+</html>
+
 {% endblock %}
