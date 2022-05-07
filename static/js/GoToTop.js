@@ -1,17 +1,14 @@
-/*Scroll to top when arrow up clicked BEGIN*/
+// ===== Scroll to Top ====
 $(window).scroll(function() {
-  var height = $(window).scrollTop();
-  if (height > 100) {
-    $('#goToTop').fadeIn();
+  if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+    $('#goToTop').fadeIn(200);    // Fade in the arrow
   } else {
-    $('#goToTop').fadeOut();
+    $('#goToTop').fadeOut(200);   // Else fade out the arrow
   }
 });
-$(document).ready(function() {
-  $("#goToTop").click(function(event) {
-    event.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    return false;
-  });
 
+$('#goToTop').click(function() {      // When arrow is clicked
+  $('body,html').animate({
+    scrollTop : 0                       // Scroll to top of body
+  }, 500);
 });
