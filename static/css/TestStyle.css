@@ -1,0 +1,205 @@
+/* Section 2; Questions section */
+
+.questionsSection
+{
+  display         : flex;
+  align-items     : center;
+  flex-direction  : column;
+  justify-content : center;
+}
+
+section
+{
+  margin-bottom : 2rem;
+}
+
+.questions
+{
+  margin-top : 9rem;
+  text-align : center;
+}
+
+.question
+{
+  margin-bottom  : 4rem;
+  font-size      : 24px;
+  font-weight    : 400;
+  text-transform : uppercase;
+}
+
+.question p:not(.choices p)
+{
+  margin-bottom : 4rem;
+  padding       : 0 4rem;
+}
+
+.choices p
+{
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  height          : 5.1rem;
+  font-size       : 24px;
+  font-weight     : 400;
+  color           : white;
+  border-radius   : 15px;
+  background      : #88619A;
+}
+
+.choices p:hover
+{
+  cursor           : pointer;
+  background-color : #A575B8;
+}
+
+/* Bottom of questions
+  Numbers CSS */
+
+.pageSwitch
+{
+  display     : flex;
+  align-items : center;
+}
+
+.pageSwitch a
+{
+  width      : 30px;
+  height     : 0;
+  margin-top : -1rem;
+  transition : all .2s;
+}
+
+.pageSwitch a:hover
+{
+  cursor    : pointer;
+  transform : scale(1.1);
+}
+
+.pageNumbers
+{
+  display : inline-block;
+  padding : 1rem;
+}
+
+.pageNumbers a
+{
+  float         : left;
+  width         : 1rem;
+  height        : 2rem;
+  margin        : 0 15px;
+  padding       : 0.5rem 1rem;
+  transition    : background-color .3s;
+  font-size     : 24px;
+  font-weight   : 400;
+  text-align    : center;
+  border-radius : 40px;
+
+}
+
+.pageNumbers a.active
+{
+  font-weight      : 600;
+  background-color : #DDDDDD;
+}
+
+.pageNumbers a:hover:not(.active)
+{
+  cursor           : pointer;
+  background-color : #C4C4C4;
+}
+
+.nextButton
+{
+  width         : 490px;
+  height        : 102px;
+  margin-top    : 5rem;
+  font-size     : 32px;
+  font-weight   : 400;
+  line-height   : 39px;
+  color         : #FFFFFF;
+  border        : 1px solid #70FF00;
+  border-radius : 45px;
+  background    : #70FF00;
+}
+
+.nextButton:hover
+{
+  cursor     : pointer;
+  background : #5DD101;
+}
+
+/* Go to top button */
+
+#goToTop {
+  display: none;
+  position: fixed;
+  bottom: 4rem;
+  right: 16rem;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #C4C4C4;
+  cursor: pointer;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12rem;
+  transition: all 0.3s ease;
+}
+
+#goToTop:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  background-color: #a09f9f;
+}
+
+@media (max-width : 860px)
+{
+  .choices p
+  {
+    margin : 1rem 2rem;
+  }
+
+  .nextButton
+  {
+    width : 22rem;
+  }
+}
+
+@media (max-width : 300px)
+{
+  .question p:not(.choices p)
+  {
+    width       : 90%;
+    margin-left : -3rem;
+  }
+  .choices p,
+  .question
+  {
+    font-size : 1rem;
+  }
+
+  .nextButton
+  {
+    width  : 17rem;
+    height : 4rem;
+  }
+
+  .pageSwitch
+  {
+    width : 15rem;
+  }
+
+  .pageNumbers a
+  {
+    width   : 2rem;
+    height  : 2rem;
+    margin  : 0 8px;
+    padding : 0;
+  }
+
+  .pageNumbers a
+  {
+    font-size : 20px;
+  }
+}
+

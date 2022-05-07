@@ -1,0 +1,122 @@
+*
+{
+  font-family : 'Inter', sans-serif;
+}
+
+header
+{
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  width           : 100%;
+  height          : 7.5rem;
+  background      : #FFFFFF;
+  box-shadow      : 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header h1
+{
+  font-size   : 4.5rem;
+  font-weight : 700;
+}
+
+.section01
+{
+  display             : flex;
+  align-items         : center;
+  flex-direction      : column;
+  justify-content     : space-evenly;
+  width               : 100%;
+  height              : 100%;
+  background-image    : url('../BackgroundBubbles.png');
+  background-repeat   : no-repeat;
+  background-position : center;
+  background-size     : cover;
+}
+
+.instructions
+{
+  display         : flex;
+  justify-content : center;
+  width           : 100%;
+  height          : 18rem;
+  margin-top      : 19rem;
+}
+
+.instruction
+{
+  display         : flex;
+  align-items     : center;
+  flex-direction  : column;
+  justify-content : center;
+  width: 23%;
+  height          : 100%;
+  margin-left     : 1.4rem;
+  padding: 1rem 0.9rem;
+  text-align      : center;
+  border          : 1px solid rgba(250, 250, 250, 0);
+  border-radius   : 15px;
+}
+
+.instruction h2
+{
+  margin-bottom : 1.7rem;
+  font-weight   : 400;
+}
+
+.instruction p
+{
+  font-weight : 400;
+}
+
+@media (max-width: 858px) {
+  header h1
+  {
+    font-size : 3.5rem;
+  }
+  .instructions
+  {
+    margin-lefT:-1.5rem;
+    width          : 115%;
+  }
+}
+
+@media (max-width : 650px)
+{
+  section
+  {
+    margin-bottom : 6rem;
+  }
+
+  header h1
+  {
+    font-size : 2.3rem;
+  }
+
+  .instructions
+  {
+    align-items    : center;
+    flex-direction : column;
+    width          : 270%;
+  }
+
+  .instruction
+  {
+    width      : 23%;
+    margin-top : 1.4rem;
+  }
+}
+
+@media (max-width : 300px) {
+  header {
+    height: 7rem;
+  }
+  header h1
+  {
+    font-size : 1.6rem;
+  }
+  section
+  {
+    margin-bottom : 10rem;
+  }
+}
