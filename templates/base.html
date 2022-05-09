@@ -1,14 +1,27 @@
+<!-- This page is the source for all HTML pages -->
+
 <!DOCTYPE html>
     <html lang="en">
+    <!-- The head is common between all HTML pages in the app -->
     <head>
         <meta charset="UTF-8">
+        <!-- The page title is taken from the main app file "personality_test.py" from "pagetitle" attribute for each page -->
         <title>{{ pagetitle }}</title>
-        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" /> -->
+        <!-- If any page from the app pages in "personlity_test.py" has "custom_css" attribute, this if condition will look for the specified css file -->
         {% if custom_css %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/' + custom_css + '.css') }}" />
         {% endif %}
+        <!-- This line takes an icon to be the icon of the website pages in all browser tabs -->
         <link rel="icon" href="{{ url_for('static', filename='icons/icon.png') }}" />
     </head>
+    
+    <!--
+    If you want to create a new HTML page, it should look like this:
+    {% extends 'base.html' %}
+    {% block body %}
+    HTML BODY CODE GOES HERE
+    {% endblock %}
+    -->
     <body>
         {% block body %}
         {% endblock %}
