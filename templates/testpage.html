@@ -1,6 +1,82 @@
 {% extends 'base.html' %}
 {% block body %}
 
+<!-- This is index.html file in Sama's Project -->
+<section class = "section01">
+    <header>
+        <h1 class="page-head">{{ page_head }}</h1>
+        <!-- <p class="page-description">{{ description }}</p> -->
+    </header>
+
+    <div class = "instructions">
+
+        <div class = "instruction" style = "background-color: #D8E9EF">
+          <h2>Complete The Test</h2>
+          <p>Be yourself and answer honestly to
+             find out your personality type.</p>
+        </div>
+
+        <div class = "instruction" style = "background-color: #ECE5D5">
+          <h2>View Detailed Results</h2>
+          <p>Learn how your personality type
+             influences many areas of your life.</p>
+        </div>
+
+        <div class = "instruction" style = "background-color: #EDDEF4">
+          <h2>Unlock Your Potential</h2>
+          <p>Grow into the person you want to be
+             with your optional Premium Profile.</p>
+        </div>
+
+      </div>
+</section>
+
+<section class = "questionsSection">
+    <div class = "questions">
+
+        <div class = "question">
+          <p>WHEN YOU GO SOMEWHERE FOR THE DAY, WOULD YOU RATHER</p>
+          <div class = "choices">
+            <p>PLAN WHAT YOU WILL DO AND WHEN</p>
+            <p>JUST GO!!</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>IF YOU WERE A TEACHER, WOULD YOU RATHER TEACH</p>
+          <div class = "choices">
+            <p>FACTS-BASED COURSES</p>
+            <p>COURSES INVOLVING OPINION OR THEORY?</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class = "pageSwitch">
+
+        <a>
+          <img src = "./static/icons/LeftArrow.svg" alt = "Right Arrow">
+        </a>
+
+        <div class = "pageNumbers">
+
+          <a>1</a>
+          <a>2</a>
+          <a>3</a>
+
+        </div>
+
+        <a>
+          <img src = "./static/icons/RightArrow.svg" alt = "Left Arrow">
+        </a>
+
+      </div>
+
+      <button class = "nextButton">Next</button>
+</section>
+<!-- index.html file in Sama's Project ends here -->
+
+<!-- Progress Bar Implementation -->
 {% for i in progress %}
 <div class="i-box">
     <div class="i-name">{{ i[0] }}</div>
@@ -9,4 +85,5 @@
     </div>
 </div>
 {% endfor %}
+<!-- Progress Bar Implementation ends here -->
 {% endblock %}
