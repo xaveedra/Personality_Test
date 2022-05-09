@@ -1,3 +1,4 @@
+/* This Part is related to Progress Bar Animations */
 .i-box {
     background-color: #FFF;
     padding: 20px;
@@ -5,18 +6,18 @@
     border: 1px solid #CCC;
     width: 450px;
   }
-  .i-box .i-name {
+.i-box .i-name {
     text-align: center;
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: bold;
   }
-  .i-box .i-progress {
+.i-box .i-progress {
     background-color: #F7F7F7;
     padding: 10px;
     position: relative;
   }
-  .i-box .i-progress span {
+.i-box .i-progress span {
     position: absolute;
     left: 0;
     top: 0;
@@ -24,3 +25,801 @@
     height: 100%;
     background-color: #009688
   }
+/* Progress Bar Animation ends here */
+
+/* This is the main.css file in Sama's Project */
+  html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .hidden,
+  [hidden] {
+    display: none !important;
+  }
+  
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  
+  /*
+   * Extends the .sr-only class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+  
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  
+  /*
+   * Hide visually and from screen readers, but maintain layout
+   */
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  /*
+   * Clearfix: contain floats
+   *
+   * For modern browsers
+   * 1. The space content is one way to avoid an Opera bug when the
+   *    `contenteditable` attribute is included anywhere else in the document.
+   *    Otherwise it causes space to appear at the top and bottom of elements
+   *    that receive the `clearfix` class.
+   * 2. The use of `table` rather than `block` is only necessary if using
+   *    `:before` to contain the top-margins of child elements.
+   */
+  
+  .clearfix::before,
+  .clearfix::after {
+    content: " ";
+    display: table;
+  }
+  
+  .clearfix::after {
+    clear: both;
+  }
+  
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  
+  @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+  }
+  
+  @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+  
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+  
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+  
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+  
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+  
+    pre {
+      white-space: pre-wrap !important;
+    }
+  
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+  
+    /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+      display: table-header-group;
+    }
+  
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+  
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+  
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+/* The main.css file in Sama's Project ends here */
+
+/* This is the normalize.css file in Sama's Project */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+/* The mormalize.css file in Sama's Project ends here */
+
+/* This is the Section01Style.css file in Sama's Project */
+*
+{
+  font-family : 'Inter', sans-serif;
+}
+
+header
+{
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  width           : 100%;
+  height          : 7.5rem;
+  background      : #FFFFFF;
+  box-shadow      : 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header h1
+{
+  font-size   : 4.5rem;
+  font-weight : 700;
+}
+
+.section01
+{
+  display             : flex;
+  align-items         : center;
+  flex-direction      : column;
+  justify-content     : space-evenly;
+  width               : 100%;
+  height              : 100%;
+  background-image    : url('/static/icons/BackgroundBubbles.png');
+  background-repeat   : no-repeat;
+  background-position : center;
+  background-size     : cover;
+}
+
+.instructions
+{
+  display         : flex;
+  justify-content : center;
+  width           : 100%;
+  height          : 18rem;
+  margin-top      : 19rem;
+}
+
+.instruction
+{
+  display         : flex;
+  align-items     : center;
+  flex-direction  : column;
+  justify-content : center;
+  width           : 23%;
+  height          : 100%;
+  margin-left     : 1.4rem;
+  padding         : 1rem 0.9rem;
+  text-align      : center;
+  border          : 1px solid rgba(250, 250, 250, 0);
+  border-radius   : 15px;
+}
+
+.instruction h2
+{
+  margin-bottom : 1.7rem;
+  font-weight   : 400;
+}
+
+.instruction p
+{
+  font-weight : 400;
+}
+
+@media (max-width : 500px)
+{
+  section
+  {
+    margin-bottom : 6rem;
+  }
+
+  header h1
+  {
+    font-size : 2.3rem;
+  }
+
+  .instructions
+  {
+    align-items    : center;
+    flex-direction : column;
+    width          : 270%;
+  }
+
+  .instruction
+  {
+    width      : 23%;
+    margin-top : 1.4rem;
+  }
+}
+/* The Section01Style.css file in Sama's Project ends here */
+
+/* This is the Section01Style.css file in Sama's Project */
+/* Section 2; Questions section */
+
+.questionsSection
+{
+  display         : flex;
+  align-items     : center;
+  flex-direction  : column;
+  justify-content : center;
+}
+
+section
+{
+  margin-bottom : 2rem;
+}
+
+.questions
+{
+  margin-top : 9rem;
+  text-align : center;
+}
+
+.question
+{
+  margin-bottom  : 4rem;
+  font-size      : 24px;
+  font-weight    : 400;
+  text-transform : uppercase;
+}
+
+.question p:not(.choices p)
+{
+  margin-bottom : 4rem;
+  padding       : 0 4rem;
+}
+
+.choices p
+{
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  height          : 5.1rem;
+  font-size       : 24px;
+  font-weight     : 400;
+  color           : white;
+  border-radius   : 15px;
+  background      : #88619A;
+}
+
+.choices p:hover
+{
+  cursor           : pointer;
+  background-color : #A575B8;
+}
+
+/* Bottom of questions
+  Numbers CSS */
+
+.pageSwitch
+{
+  display     : flex;
+  align-items : center;
+}
+
+.pageSwitch a
+{
+  width      : 30px;
+  height     : 0;
+  margin-top : -1rem;
+  transition : all .2s;
+}
+
+.pageSwitch a:hover
+{
+  cursor    : pointer;
+  transform : scale(1.1);
+}
+
+.pageNumbers
+{
+  display : inline-block;
+  padding : 1rem;
+}
+
+.pageNumbers a
+{
+  float         : left;
+  width         : 1rem;
+  height        : 2rem;
+  margin        : 0 15px;
+  padding       : 0.5rem 1rem;
+  transition    : background-color .3s;
+  font-size     : 24px;
+  font-weight   : 400;
+  border-radius : 40px;
+}
+
+.pageNumbers a.active
+{
+  font-weight      : 600;
+  background-color : #DDDDDD;
+}
+
+.pageNumbers a:hover:not(.active)
+{
+  cursor           : pointer;
+  background-color : #C4C4C4;
+}
+
+.nextButton
+{
+  width         : 490px;
+  height        : 102px;
+  margin-top    : 5rem;
+  font-size     : 32px;
+  font-weight   : 400;
+  line-height   : 39px;
+  color         : #FFFFFF;
+  border        : 1px solid #70FF00;
+  border-radius : 45px;
+  background    : #70FF00;
+}
+
+.nextButton:hover
+{
+  cursor     : pointer;
+  background : #5DD101;
+}
+
+@media (max-width : 860px)
+{
+  .choices p
+  {
+    margin : 1rem 2rem;
+  }
+
+  .nextButton
+  {
+    width : 22rem;
+  }
+}
+/* The TestStyle.css file in Sama's Project ends here */
