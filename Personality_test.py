@@ -1,27 +1,31 @@
 from flask import Flask, render_template
 
+# identify the app's name and always use @app_name(@personality_test in our case) if you want to take actions inside the app
 personlity_test = Flask(__name__)
 
-
+# This is a sample progress bar to be represented in the answers page, you can comment it if you won't be using it
 progress_bar = [('progress', 50)]
 
-# @personlity_test.route("/")
-# def homepage():
-#     return render_template("homepage.html",
-#                             pagetitle="Homepage",
-#                             custom_css="homepage",
-#                             page_head="Homepage",
-#                             description="This is the Homepage")
-
-@personlity_test.route("/") # free-personality-test
+"""
+- We use @personality_test.route() method to initiate a new page in our app
+- At least one page is mandatory to be existed in the app, which is root page or homepage defined by "/"
+- We use render_template() method to load an HTML page into our app, in this case we load "testpage.html" as the homepage
+- render_template() method looks for the mentioned HTML page in a folder called "templates"(mandatory folder to be existed)
+- The main attributes of the page has been declared here to be easily modified, and its code in the HTML file
+- "pagetitle" attribute declares the page title to be shown in the page browser tab
+- "custom_css" attribute looks for a css file called "testpage.css" in a path "/static/css/filename.css"
+- The other attributes are declared in the same way, and its code in the HTML page
+"""
+@personlity_test.route("/")
 def personality_test():
-    return render_template("testpage.html",
+        return render_template("testpage.html",
                             pagetitle="Myers-Briggs Personality Test",
                             custom_css="testpage",
                             page_head="Personality Test",
                             description="This is the Test Page",
-                            progress=progress_bar,)
+                            progress=progress_bar)
 
+# Here we identify the 2nd page of our app
 @personlity_test.route("/Test-results")
 def types():
     return render_template("results.html",
