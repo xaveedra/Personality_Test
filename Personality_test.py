@@ -26,8 +26,44 @@ def personality_test():
                             progress=progress_bar)
 
 # Here we identify the 2nd page of our app
+@personlity_test.route("/2nd-qs-page")
+def second():
+    return render_template("2nd-qs.html",
+                            pagetitle="Myers-Briggs Personality Test",
+                            custom_css="testpage",
+                            page_head="Personality Test",
+                            description="This is the Test Page")
+
+# Here we identify the 3rd page of our app
+@personlity_test.route("/3rd-qs-page")
+def third():
+    return render_template("3rd-qs.html",
+                            pagetitle="Myers-Briggs Personality Test",
+                            custom_css="testpage",
+                            page_head="Personality Test",
+                            description="This is the Test Page")
+
+# Here we identify the 4th page of our app
+@personlity_test.route("/4th-qs-page")
+def fourth():
+    return render_template("4th-qs.html",
+                            pagetitle="Myers-Briggs Personality Test",
+                            custom_css="testpage",
+                            page_head="Personality Test",
+                            description="This is the Test Page")
+
+# Here we identify the 5th page of our app
+@personlity_test.route("/5th-qs-page")
+def fifth():
+    return render_template("5th-qs.html",
+                            pagetitle="Myers-Briggs Personality Test",
+                            custom_css="testpage",
+                            page_head="Personality Test",
+                            description="This is the Test Page")
+
+# Here we identify the 6th page of our app
 @personlity_test.route("/Test-results")
-def types():
+def result():
     return render_template("results.html",
                             pagetitle="Results Page",
                             custom_css="results",
