@@ -1,6 +1,7 @@
 <!-- This page is the source for all HTML pages -->
 
 <!DOCTYPE html>
+
     <html lang="en">
     <!-- The head is common between all HTML pages in the app -->
     <head>
@@ -16,6 +17,35 @@
     </head>
     
     <body>
+
+        <section class = "section01">
+
+            <header>
+                <h1 class="page-head">{{ page_head }}</h1>
+                <!-- <p class="page-description">{{ description }}</p> -->
+            </header>
+
+            <div class = "instructions">
+                <div class = "instruction" style = "background-color: #D8E9EF">
+                    <h2>Complete The Test</h2>
+                    <p>Be yourself and answer honestly to
+                    find out your personality type.</p>
+                </div>
+
+                <div class = "instruction" style = "background-color: #ECE5D5">
+                    <h2>View Detailed Results</h2>
+                    <p>Learn how your personality type
+                    influences many areas of your life.</p>
+                </div>
+
+                <div class = "instruction" style = "background-color: #EDDEF4">
+                    <h2>Unlock Your Potential</h2>
+                    <p>Grow into the person you want to be
+                    with your optional Premium Profile.</p>
+                </div>
+            </div>
+
+        </section>
         {% block body %}
         {% endblock %}
         <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
