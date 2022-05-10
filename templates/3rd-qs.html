@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<section class = "questionsSection">
+    <div class = "questions">
+
+<div class = "question">
+          <p>IN A LARGE GROUP, DO YOU MORE OFTEN</p>
+          <div class = "choices">
+            <p>INTRODUCE OTHERS, OR</p>
+            <p>GET INTRODUCED?</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>DO YOU USUALLY</p>
+          <div class = "choices">
+            <p>VALUE EMOTION MORE THAN LOGIC, OR</p>
+            <p>VALUE LOGIC MORE THAN FEELINGS?</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WOULD YOU RATHER HAVE AS A FRIEND</p>
+          <div class = "choices">
+            <p>SOMEONE WHO IS ALWAYS COMING UP WITH NEW
+              IDEAS, OR</p>
+            <p>SOMEONE WHO HAS BOTH FEET ON THE GROUND?</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>CAN THE NEW PEOPLE YOU MEET TELL WHAT YOU ARE INTERESTED
+            IN</p>
+          <div class = "choices">
+            <p>RIGHT AWAY,</p>
+            <p>ONLY AFTER THEY REALLY GET TO KNOW YOU?</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>(ON THIS QUESTION ONLY, IF TWO ANSWERS ARE TRUE, CIRCLE
+            BOTH)
+            IN YOUR DAILY WORK, DO YOU</p>
+          <div class = "choices">
+            <p>USUALLY PLAN YOUR WORK SO YOU WON’T NEED TO
+              WORK UNDER PRESSURE, OR</p>
+            <p>RATHER ENJOY AN EMERGENCY THAT MAKES YOU WORK
+              AGAINST TIME</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>DO YOU USUALLY</p>
+          <div class = "choices">
+            <p>SHOW YOUR FEELINGS FREELY, OR</p>
+            <p>KEEP YOUR FEELINGS TO YOURSELF?</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>SCHEDULED</p>
+            <p>UNPLANNED</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>FACTS</p>
+            <p>IDEAS</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>QUIET</p>
+            <p>HEARTY</p>
+          </div>
+        </div>
+        
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>CONVINCING</p>
+            <p>TOUCHING</p>
+          </div>
+        </div>
+        
+        </div>
+
+      <div class = "pageSwitch">
+
+        <a onclick="window.location.href='/2nd-qs-page'">
+          <img src = "./static/icons/LeftArrow.svg" alt = "Right Arrow">
+        </a>
+
+        <div class = "pageNumbers">
+
+        <a onclick="window.location.href='/'">1</a>
+        <a onclick="window.location.href='/2nd-qs-page'">2</a>
+        <a>3</a>
+        <a onclick="window.location.href='/4th-qs-page'">4</a>
+        <a onclick="window.location.href='/5th-qs-page'">5</a>
+
+        </div>
+
+        <a onclick="window.location.href='/4th-qs-page'">
+          <img src = "./static/icons/RightArrow.svg" alt = "Left Arrow">
+        </a>
+
+      </div>
+
+      <button onclick="window.location.href='/4th-qs-page'" class = "nextButton">Next</button>
+</section>
+
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<section class = "questionsSection">
+  <div class = "questions">
+
+<div class = "question">
+        <p>DO YOU PREFER TO</p>
+        <div class = "choices">
+          <p>ARRANGE PICNICS, PARTIES ETC, WELL IN ADVANCE, OR</p>
+          <p>BE FREE TO DO WHATEVER TO LOOKS LIKE FUN WHEN
+            THE TIME COMES?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>DO YOU USUALLY GET ALONG BETTER WITH</p>
+        <div class = "choices">
+          <p>REALISTIC PEOPLE, OR</p>
+          <p>IMAGINATIVE PEOPLE?</p>
+        </div>
+      </div>
+
+
+      <div class = "question">
+        <p>WHEN YOU ARE WITH THE GROUP OF PEOPLE, WOULD YOU USUALLY
+          RATHER</p>
+        <div class = "choices">
+          <p>JOIN IN THE TALK OF THE GROUP OR</p>
+          <p>STAND BACK AND LISTEN FIRST?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>IS IT A HIGHER COMPLIMENT TO BE CALLED</p>
+        <div class = "choices">
+          <p>A PERSON OF REAL FEELING, OR</p>
+          <p>A CONSISTENTLY REASONABLE PERSON?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>IN READING FOR PLEASURE, DO YOU</p>
+        <div class = "choices">
+          <p>ENJOY ODD OR ORIGINAL WAYS OF SAYING THINGS, OR</p>
+          <p>LIKE WRITERS TO SAY EXACTLY WHAT THEY MEAN?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>DO YOU</p>
+        <div class = "choices">
+          <p>TALK EASILY TO ALMOST ANYONE FOR AS LONG AS YOU
+            HAVE TO, OR</p>
+          <p>FIND A LOT TO SAY ONLY TO CERTAIN PEOPLE OR UNDER
+            CERTAIN CONDITIONS?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>DOES FOLLOWING A SCHEDULE</p>
+        <div class = "choices">
+          <p>APPEAL TO YOU, OR</p>
+          <p>CRAMP YOU?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>WHEN IT IS SETTLED WELL IN ADVANCE THAT YOU WILL DO A
+          CERTAIN THING AT A CERTAIN TIME,DO YOU FIND IT</p>
+        <div class = "choices">
+          <p>NICE TO BE ABLE TO PLAN ACCORDINGLY, OR</p>
+          <p>A LITTLE UNPLEASANT TO BE TIED DOWN?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>ARE YOU MORE SUCCESSFUL</p>
+        <div class = "choices">
+          <p>AT FOLLOWING A CAREFULLY WORKED OUT PLAN, OR</p>
+          <p>AT DEALING WITH THE UNEXPECTED AND SEEING
+            QUICKLY WHAT SHOULD BE DONE?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>WOULD YOU RATHER BE CONSIDERED</p>
+        <div class = "choices">
+          <p>A PRACTICAL PERSON, OR</p>
+          <p>AN OUT-OF-THE-BOX-THINKING PERSON?</p>
+        </div>
+      </div>
+      
+      </div>
+
+    <div class = "pageSwitch">
+
+      <a onclick="window.location.href='/'">
+        <img src = "./static/icons/LeftArrow.svg" alt = "Right Arrow">
+      </a>
+
+      <div class = "pageNumbers">
+
+        <a onclick="window.location.href='/'">1</a>
+        <a>2</a>
+        <a onclick="window.location.href='/3rd-qs-page'">3</a>
+        <a onclick="window.location.href='/4th-qs-page'">4</a>
+        <a onclick="window.location.href='/5th-qs-page'">5</a>
+
+      </div>
+
+      <a onclick="window.location.href='/3rd-qs-page'">
+        <img src = "./static/icons/RightArrow.svg" alt = "Left Arrow">
+      </a>
+
+    </div>
+
+    <button onclick="window.location.href='/3rd-qs-page'" class = "nextButton">Next</button>
+</section>
+
+{% endblock %}

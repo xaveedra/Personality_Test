@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<section class = "questionsSection">
+    <div class = "questions">
+
+<div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>FIRM-MINDED</p>
+            <p>WARM HEARTED</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>FEELING</p>
+            <p>THINKING</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>LITERAL</p>
+            <p>FIGURATIVE</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>PEACEMAKER</p>
+            <p>JUDGE</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>SYSTEMATIC</p>
+            <p>SPONTANEOUS</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>SYSTEMATIC</p>
+            <p>CASUAL</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>CERTAINTY</p>
+            <p>THEORY</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>ANTICIPATION</p>
+            <p>COMPASSION</p>
+          </div>
+        </div>
+
+        <div class = "question">
+          <p>WHICH WORD IN THIS PAIR APPEALS TO YOU MORE</p>
+          <div class = "choices">
+            <p>HARD</p>
+            <p>SOFT</p>
+          </div>
+        </div>
+        
+        </div>
+
+      <div class = "pageSwitch">
+
+        <a onclick="window.location.href='/4th-qs-page'">
+          <img src = "./static/icons/LeftArrow.svg" alt = "Right Arrow">
+        </a>
+
+        <div class = "pageNumbers">
+
+        <a onclick="window.location.href='/'">1</a>
+        <a onclick="window.location.href='/2nd-qs-page'">2</a>
+        <a onclick="window.location.href='/3rd-qs-page'">3</a>
+        <a onclick="window.location.href='/4th-qs-page'">4</a>
+        <a>5</a>
+
+        </div>
+
+      </div>
+
+      <button onclick="window.location.href='/Test-results'" class = "nextButton">Result</button>
+</section>
+
+{% endblock %}
