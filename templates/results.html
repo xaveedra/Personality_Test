@@ -1,31 +1,44 @@
-{% extends 'base.html' %}
-{% block body %}
+<!DOCTYPE html>
+    <html lang="en">
+    <!-- The head is common between all HTML pages in the app -->
+    <head>
+        <meta charset="UTF-8">
+        <!-- The page title is taken from the main app file "personality_test.py" from "pagetitle" attribute for each page -->
+        <title>{{ pagetitle }}</title>
+        <!-- If any page from the app pages in "personlity_test.py" has "custom_css" attribute, this if condition will look for the specified css file -->
+        {% if custom_css %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/' + custom_css + '.css') }}" />
+        {% endif %}
+        <!-- This line takes an icon to be the icon of the website pages in all browser tabs -->
+        <link rel="icon" href="{{ url_for('static', filename='icons/icon.png') }}" />
+    </head>
 
-<div class="page fac fjc flex-col">
-    <div class="header fac fjc">Your Test Results</div>
-    <div class="explain fac fjc">Thank you for completing our personality test!</div>
-    <div class="explain fac fjc">Here is a copy of your results:</div>
-    <img class="avatar" src="./static/icons/avatar.jpg" alt="avatar">
-    <div class="fjc flex-col">
-      <div class="explain fac fjc">
-        <b>Personality Type:</b>
-        <div class="pertype">"The Campaigner" (ENFP-T)</div>
+    <body>
+      <div class="page fac fjc flex-col">
+        <div class="header fac fjc">Your Test Results</div>
+        <div class="explain fac fjc">Thank you for completing our personality test!</div>
+        <div class="explain fac fjc">Here is a copy of your results:</div>
+        <img class="avatar" src="./static/icons/avatar.jpg" alt="avatar">
+        <div class="fjc flex-col">
+          <div class="explain fac fjc">
+            <b>Personality Type:</b>
+            <div class="pertype">"The Campaigner" (ENFP-T)</div>
+          </div>
+          <div><b>Individual Traits:</b></div>
+          <div class="fac fjc flex-row">
+            <ul class="list">
+              <li>Extraverted - 82%</li>
+              <li>Intuitive - 62%</li>
+              <li>Feeling - 78%</li>
+              <li>Prospecting - 60%</li>
+              <li>Turbulent - 79%</li>
+            </ul>
+          </div>
+          <div><b>Role:</b>Diplomat</div>
+          <div><b>Strategy:</b>Social Engagement</div>
+          <a class="fac fjc link" href="https://www.16personalities.com/enfp-strengths-and-weaknesses"><b>Link to your
+              profile!</b></a>
+        </div>
       </div>
-      <div><b>Individual Traits:</b></div>
-      <div class="fac fjc flex-row">
-        <ul class="list">
-          <li>Extraverted - 82%</li>
-          <li>Intuitive - 62%</li>
-          <li>Feeling - 78%</li>
-          <li>Prospecting - 60%</li>
-          <li>Turbulent - 79%</li>
-        </ul>
-      </div>
-      <div><b>Role:</b>Diplomat</div>
-      <div><b>Strategy:</b>Social Engagement</div>
-      <a class="fac fjc link" href="https://www.16personalities.com/enfp-strengths-and-weaknesses"><b>Link to your
-          profile!</b></a>
-    </div>
-  </div>
-
-{% endblock %}
+    </body>
+    </html>
