@@ -1,89 +1,126 @@
 {% extends 'base.html' %}
 {% block body %}
 
-<!-- This is index.html file in Sama's Project -->
-<section class = "section01">
-    <header>
-        <h1 class="page-head">{{ page_head }}</h1>
-        <!-- <p class="page-description">{{ description }}</p> -->
-    </header>
-
-    <div class = "instructions">
-
-        <div class = "instruction" style = "background-color: #D8E9EF">
-          <h2>Complete The Test</h2>
-          <p>Be yourself and answer honestly to
-             find out your personality type.</p>
-        </div>
-
-        <div class = "instruction" style = "background-color: #ECE5D5">
-          <h2>View Detailed Results</h2>
-          <p>Learn how your personality type
-             influences many areas of your life.</p>
-        </div>
-
-        <div class = "instruction" style = "background-color: #EDDEF4">
-          <h2>Unlock Your Potential</h2>
-          <p>Grow into the person you want to be
-             with your optional Premium Profile.</p>
-        </div>
-
-      </div>
-</section>
-
 <section class = "questionsSection">
-    <div class = "questions">
+  <div class = "questions">
 
-        <div class = "question">
-          <p>WHEN YOU GO SOMEWHERE FOR THE DAY, WOULD YOU RATHER</p>
-          <div class = "choices">
-            <p>PLAN WHAT YOU WILL DO AND WHEN</p>
-            <p>JUST GO!!</p>
-          </div>
+      <div class = "question">
+        <p>WHEN YOU GO SOMEWHERE FOR THE DAY, WOULD YOU RATHER</p>
+        <div class = "choices">
+          <p>PLAN WHAT YOU WILL DO AND WHEN</p>
+          <p>JUST GO!!</p>
         </div>
+      </div>
 
-        <div class = "question">
-          <p>IF YOU WERE A TEACHER, WOULD YOU RATHER TEACH</p>
-          <div class = "choices">
-            <p>FACTS-BASED COURSES</p>
-            <p>COURSES INVOLVING OPINION OR THEORY?</p>
-          </div>
+      <div class = "question">
+        <p>IF YOU WERE A TEACHER, WOULD YOU RATHER TEACH</p>
+        <div class = "choices">
+          <p>FACTS-BASED COURSES</p>
+          <p>COURSES INVOLVING OPINION OR THEORY?</p>
         </div>
+      </div>
+
+      <div class = "question">
+        <p>ARE YOU USUALLY</p>
+        <div class = "choices">
+          <p>"GOOD MIXER" WITH GROUPS OF PEOPLE, OR</p>
+          <p>RATHER QUIET AND RESERVED</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>DO YOU MORE OFTEN LET</p>
+        <div class = "choices">
+          <p>YOUR HEART RULE YOUR HEAD, OR</p>
+          <p>JYOUR HEAD RULE YOUR HEART</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>IN DOING SOMETHING THAT MANY OTHER DO, WOULD YOU RATHER</p>
+        <div class = "choices">
+          <p>INVENT A WAY OF YOUR OWN, OR</p>
+          <p>DO IT IN THE ACCEPTED WAY?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>AMONG YOUR FRIENDS ARE YOU</p>
+        <div class = "choices">
+          <p>FULL OF NEWS ABOUT EVERYBODY, OR</p>
+          <p>ONE OF THE LAST TO HEAR WHAT IS GOING ON?</p>
+        </div>
+      </div>
+
+      
+      <div class = "question">
+        <p>DOES THE IDEA OF MAKING A LIST OF WHAT YOU SHOULD GET DONE
+          OVER A WEEKEND</p>
+        <div class = "choices">
+          <p>HELP YOU, OR</p>
+          <p>STRESS YOU</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>WHEN YOU HAVE A SPECIAL JOB TO DO, DO YOU LIKE TO</p>
+        <div class = "choices">
+          <p>ORGANIZE IT CAREFULLY BEFORE YOU START, OR</p>
+          <p>FIND OUT WHAT IS NECESSARY AS YOU GO ALONG?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>DO YOU TEND TO HAVE</p>
+        <div class = "choices">
+          <p>BROAD FRIENDSHIPS WITH MANY DIFFERENT PEOPLE, OR</p>
+          <p>DEEP FRIENDSHIP WITH VERY FEW PEOPLE?</p>
+        </div>
+      </div>
+
+      <div class = "question">
+        <p>DO YOU ADMIRE MORE THE PEOPLE WHO ARE</p>
+        <div class = "choices">
+          <p>NORMAL-ACTING TO NEVER MAKE THEMSELVES THE
+            CENTER OF ATTENTION, OR</p>
+          <p>TOO ORIGINAL AND INDIVIDUAL TO CARE WHETHER THEY
+            ARE THE CENTER OF ATTENTION OR NOT</p>
+        </div>
+      </div>
+      
+      </div>
+
+    <div class = "pageSwitch">
+
+      <div class = "pageNumbers">
+
+        <a>1</a>
+        <a onclick="window.location.href='/2nd-qs-page'">2</a>
+        <a onclick="window.location.href='/3rd-qs-page'">3</a>
+        <a onclick="window.location.href='/4th-qs-page'">4</a>
+        <a onclick="window.location.href='/5th-qs-page'">5</a>
 
       </div>
 
-      <div class = "pageSwitch">
+      <a onclick="window.location.href='/2nd-qs-page'">
+        <img src = "./static/icons/RightArrow.svg" alt = "Left Arrow">
+      </a>
 
-        <a>
-          <img src = "./static/icons/LeftArrow.svg" alt = "Right Arrow">
-        </a>
+    </div>
 
-        <div class = "pageNumbers">
-
-          <a>1</a>
-          <a>2</a>
-          <a>3</a>
-
-        </div>
-
-        <a>
-          <img src = "./static/icons/RightArrow.svg" alt = "Left Arrow">
-        </a>
-
-      </div>
-
-      <button class = "nextButton">Next</button>
+    <!-- <a href="https://google.com" class = "nextButton">Next</a> -->
+    <button onclick="window.location.href='/2nd-qs-page'" class = "nextButton">Next</button>
+    <!-- <a href="https://google.com" class="button">Go to Google</a> -->
 </section>
-<!-- index.html file in Sama's Project ends here -->
 
 <!-- Progress Bar Implementation -->
-{% for i in progress %}
+<!-- {% for i in progress %}
 <div class="i-box">
     <div class="i-name">{{ i[0] }}</div>
     <div class="i-progress">
         <span data-width="{{ i[1] }}%"></span>
     </div>
 </div>
-{% endfor %}
+{% endfor %} -->
 <!-- Progress Bar Implementation ends here -->
 {% endblock %}
